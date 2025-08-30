@@ -22,5 +22,6 @@ public class butterfly {
              System.out.println("*"); 
                System.out.println(); 
     }
+        kbd.close();
 }
 }

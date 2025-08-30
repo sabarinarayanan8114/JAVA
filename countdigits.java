@@ -15,5 +15,6 @@ public static void main(String []args){
         System.out.print(dig+"");
         div=div/10;
     }
+    kbd.close();
 }
 }

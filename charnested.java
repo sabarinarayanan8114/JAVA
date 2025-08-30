@@ -9,6 +9,7 @@ public class charnested {
             }
              System.out.println();
            
-        }      
+        }
+        scan.close();      
     }
 }

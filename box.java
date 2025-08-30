@@ -13,6 +13,7 @@ public class box {
         System.out.println();
        
     }}
+    kbd.close();
 }
 
 }

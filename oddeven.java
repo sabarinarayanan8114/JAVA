@@ -12,5 +12,6 @@ public class oddeven {
                 System.out.println("The Number"+i+"is odd");
             }
 
+            kbd.close();
         }
     }

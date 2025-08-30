@@ -17,5 +17,6 @@ public class diamond {
     System.out.print("*");
               System.out.println();  
         }
+        kbd.close();
     }
 }

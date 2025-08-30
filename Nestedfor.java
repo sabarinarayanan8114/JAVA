@@ -9,6 +9,7 @@ public class Nestedfor {
             }
              System.out.println();
            
-        }      
+        }   
+        scan.close();   
     }
 }
