@@ -5,7 +5,7 @@ public static void main(String[] args) {
     System.out.print("Enter the number: ");
     int n = kbd.nextInt();
     for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <=n-i; j++) {
+        for (int j = 1; j <=n; j++) {
             System.out.print(" ");
         }
         for (int j = 1; j<=n;j++) {
@@ -13,6 +13,5 @@ public static void main(String[] args) {
         }
         System.out.println();
     }
-    kbd.close();
-}
+    
 }

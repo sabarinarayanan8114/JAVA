@@ -9,7 +9,10 @@ public class DaysConversion {
         int months=remainingDays/30;
         int daysleft=remainingDays%30;
         System.out.println(years+" Years "+months+" Months "+daysleft+" Days");
+
         kbd.close();
     }
     
 }
+
+
