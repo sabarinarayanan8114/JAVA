@@ -1,0 +1,59 @@
+import java.util.*;
+
+class Solution {
+    public String reorganizeString(String s) {
+
+        int[] count = new int[26];
+
+        for (char c : s.toCharArray()) {
+            count[c - 'a']++;
+        }
+        PriorityQueue<int[]> pq = new PriorityQueue<>(
+            (a, b) -> b[0] - a[0]
+        );
+
+        for (int i = 0; i < 26; i++) {
+            if (count[i] > 0) {
+                pq.offer(new int[]{count[i], i});
+            }
+        }
+
+        StringBuilder ans = new StringBuilder();
+        while (pq.size() > 1) {
+
+            int[] first = pq.poll();
+            int[] second = pq.poll();
+
+            int f1 = first[0];
+            int c1 = first[1];
+
+            int f2 = second[0];
+            int c2 = second[1];
+
+            ans.append((char)(c1 + 'a'));
+            ans.append((char)(c2 + 'a'));
+
+            if (--f1 > 0) {
+                pq.offer(new int[]{f1, c1});
+            }
+
+            if (--f2 > 0) {
+                pq.offer(new int[]{f2, c2});
+            }
+        }
+
+        if (!pq.isEmpty()) {
+            int[] last = pq.poll();
+            int freq = last[0];
+            int ch = last[1];
+
+            if (freq > 1) {
+                return "";
+            }
+
+            ans.append((char)(ch + 'a'));
+        }
+
+        return ans.toString();
+    }
+}
